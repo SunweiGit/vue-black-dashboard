@@ -4,16 +4,7 @@
     <div class="container-fluid">
       <div class="navbar-wrapper">
         <div class="navbar-toggle d-inline" :class="{toggled: $sidebar.showSidebar}">
-          <button type="button"
-                  class="navbar-toggler"
-                  aria-label="Navbar toggle button"
-                  @click="toggleSidebar">
-            <span class="navbar-toggler-bar bar1"></span>
-            <span class="navbar-toggler-bar bar2"></span>
-            <span class="navbar-toggler-bar bar3"></span>
-          </button>
         </div>
-        <a class="navbar-brand" href="#pablo">{{routeName}}</a>
       </div>
       <button class="navbar-toggler" type="button"
               @click="toggleMenu"
@@ -28,6 +19,7 @@
 
       <collapse-transition>
         <div class="collapse navbar-collapse show" v-show="showMenu">
+          <a class="nav-link" href="/" style="font-size: 25px">悦读</a>
           <ul class="navbar-nav" :class="$rtl.isRTL ? 'mr-auto' : 'ml-auto'">
             <div class="search-bar input-group" @click="searchModalVisible = true">
               <!-- <input type="text" class="form-control" placeholder="Search...">
@@ -42,7 +34,7 @@
                    id="searchModal"
                    :centered="false"
                    :show-close="true">
-              <input slot="header" v-model="searchQuery" type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+              <input slot="header" v-model="searchQuery" type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search">
             </modal>
             <base-dropdown tag="li"
                            :menu-on-right="!$rtl.isRTL"
@@ -85,7 +77,10 @@
                 </p>
               </a>
               <li class="nav-link">
-                <a href="#" class="nav-item dropdown-item">Profile</a>
+                <a href="#/table-list" class="nav-item dropdown-item">table</a>
+              </li>
+              <li class="nav-link">
+                <a href="#/profile" class="nav-item dropdown-item">Profile</a>
               </li>
               <li class="nav-link">
                 <a href="#" class="nav-item dropdown-item">Settings</a>
@@ -94,6 +89,17 @@
               <li class="nav-link">
                 <a href="#" class="nav-item dropdown-item">Log out</a>
               </li>
+              <li class="nav-link">
+                <a href="#/login" class="nav-item dropdown-item">Login</a>
+              </li>
+              <li class="nav-link">
+                <a href="#/register" class="nav-item dropdown-item">Register</a>
+              </li>
+              <li class="nav-link">
+                <a href="#/components" class="nav-item dropdown-item">components</a>
+              </li>
+
+
             </base-dropdown>
           </ul>
         </div>

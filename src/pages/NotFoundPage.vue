@@ -10,29 +10,32 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <router-link :to="{path:'/'}" class="navbar-brand">Site title</router-link>
+<!--
+          <router-link :to="{path:'/'}" class="navbar-brand" style="font-size: 25px">悦读</router-link>
+-->
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navigation-example-2">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <router-link :to="{path:'/'}">Home</router-link>
-            </li>
-          </ul>
-        </div>
+        <!--   <div class="collapse navbar-collapse" id="navigation-example-2">
+             <ul class="nav navbar-nav navbar-right">
+               <li>
+                 <router-link :to="{path:'/'}">Home</router-link>
+               </li>
+             </ul>
+           </div>-->
         <!-- /.navbar-collapse -->
       </div>
       <!-- /.container-->
     </nav>
     <div class="wrapper wrapper-full-page section content">
-      <div class="">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-              <h2 class="title text-danger">404 Not Found</h2>
-              <h2 class="title">Oops! It seems that this page does not exist.</h2>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2 class="title text-danger">404 Not Found</h2>
+            <h2 class="title">Oops! It seems that this page does not exist.</h2>
+
+            <router-link :to="{path:'/'}" class="navbar-brand" style="font-size: 25px">悦读</router-link>
+
           </div>
         </div>
       </div>
@@ -40,14 +43,7 @@
     <footer class="footer-demo">
       <div class="container">
         <nav class="pull-left">
-          <ul>
-            <li>
-              <router-link :to="{path:'/'}">Home</router-link>
-            </li>
-            <li>
-              <router-link :to="{path:'/register'}">Register</router-link>
-            </li>
-          </ul>
+
         </nav>
         <div class="copyright pull-right">
           &copy; 2018, made with
@@ -59,5 +55,5 @@
 </template>
 
 <script>
-export default {};
+  export default {};
 </script>

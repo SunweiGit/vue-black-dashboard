@@ -1,6 +1,9 @@
 const webpack = require('webpack');
 
 module.exports = {
+  devServer: {
+    port: 8080,   // 端口号
+  },
   lintOnSave: false,
   configureWebpack: {
     // Set up all the aliases we use in our app.
